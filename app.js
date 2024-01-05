@@ -18,7 +18,7 @@ console.log(regEx) // shahid
 let regEx_G = str.match(/shahid/g) // g is using for to match all shahid world in the sentence.
 console.log(regEx_G);
 
-// now it should match but it's look like it's not working why? ooh the second letter is small so if we want to use in case sensitive use flag i
+// now it should match but it's look like it's not working why? ooh the second letter is small so if we want to use in case insensitive use flag i
 
 let regEx_GE = str.match(/shahid/gi); // I dont care about captal case, I want all the matching letter. so using i flag.
 console.log(regEx_GE);
@@ -36,3 +36,15 @@ console.log(str2.match(/[a-g]at/gi)); // this will work same will all the alphab
 // let suppose I dont want to match all letter except [c] hmm 🤔. we can use Negation by using zor ^.
 console.log(str2.match(/[^a]at/gi));// it will match all letter but not a
 
+//=========================== Repeating Characters ===========================
+
+// let's see if you want to match all the number in string for E.g the phone number. [0-9][0-9][0-9][0-9][0-9]....and so on but this not the right way to do.
+let num = `123456789101100000`;
+// using [+] operator after the character sets. hmm🤔? what plus do? the plus operator is knows as quantifier, in simple words one or more.
+console.log(num.match(/[0-9]+/gi)); 
+// but we want to match 11 digit numbers...🥹 we can give another quantifier in regEx which is {} we can pass exactly how many number we have to match consecutive digits. 
+console.log(num.match(/[0-9]{11}/gi)) // now just matching 11 digits.
+// what if you want to match in range like minimum can 11 digits and maximum can 15;
+console.log(num.match(/[0-9]{11,15}/gi));
+// if we want minimum range we will not give maximum;
+console.log(num.match(/[0-9]{10,}/gi));
