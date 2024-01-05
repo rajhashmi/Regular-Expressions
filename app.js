@@ -48,3 +48,16 @@ console.log(num.match(/[0-9]{11}/gi)) // now just matching 11 digits.
 console.log(num.match(/[0-9]{11,15}/gi));
 // if we want minimum range we will not give maximum;
 console.log(num.match(/[0-9]{10,}/gi));
+
+// ================================ Metacharacters
+
+//  \d match any digit character (same as [0-9]);
+//  \D match non-digit characters
+//  \w match any word character (a-z, A-Z, 0-9 and _)
+//  \W match a non-word character
+//  \s match a whiterspace character (space, tabs etc)
+//  \t match a tab character only.
+//  \B Find a match, but not at the beginning/end of a word
+// d -- match the literal character, "d"
+// \d -- match any digit character
+
