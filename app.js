@@ -49,7 +49,7 @@ console.log(num.match(/[0-9]{11,15}/gi));
 // if we want minimum range we will not give maximum;
 console.log(num.match(/[0-9]{10,}/gi));
 
-// ================================ Metacharacters
+// ================================ Metacharacters ===========
 
 //  \d match any digit character (same as [0-9]);
 //  \D match non-digit characters
@@ -61,3 +61,24 @@ console.log(num.match(/[0-9]{10,}/gi));
 // d -- match the literal character, "d"
 // \d -- match any digit character
 
+
+// ================================ special characters ========
+
+// ? this character meaning it can occur zero or one time, before one character
+// colou?r
+// color 
+// . this means any letter at that place can be 
+// cat.
+// catd , catw, 
+
+// let see we want to match 5 letters and it should also match from back as well as for E.g (hello) let's see in this case (helloshahid) no not work because it's matching hello from beginer but from last it's not matching.
+
+let str3 = "hello";
+console.log(str3.match(/^[a-z]{5}$/gi)); 
+// ^ (caret): It asserts the start of the string. Everything following it in the regular expression should match from the beginning of the string.
+// $ (dollar sign): It asserts the end of the string. Everything preceding it in the regular expression should match up to the end of the string
+
+// pipe is | same as or operator
+// p|t
+// p|tyre
+// (p|t)tyre        
