@@ -82,3 +82,5 @@ console.log(str3.match(/^[a-z]{5}$/gi));
 // p|t
 // p|tyre
 // (p|t)tyre        
+let str4 = "hello";
+console.log(str4.match(/(h|t)ello/gi));
