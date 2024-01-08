@@ -84,3 +84,50 @@ console.log(str3.match(/^[a-z]{5}$/gi));
 // (p|t)tyre        
 let str4 = "hello";
 console.log(str4.match(/(h|t)ello/gi));
+
+// Question on RegEx
+// 1. Extract all number from a string
+let question1Str = 'Hello 123 world 456.';
+let ans1 = /\d/g;
+console.log(question1Str.match(ans1));
+
+// 2. Replace all whitespace characters with a single space.
+let question2Str = 'hello       world!.';
+console.log(question2Str.replace(/\s+/gi, " "));
+
+// 3. Validate a 10-digit phone number.
+	let isValidPhone = '1234567890';
+console.log(isValidPhone.match(/^[0-9]{10}$/g));
+
+//4. Check if a string starts with "Hello".
+
+	let question3Str = 'Hello world';
+console.log(question3Str.match(/^hello/gi));
+
+// 5. // Find all words that end with "ing".
+
+	let question4Str = 'Playing, singing, laughing, Go, Come, Die, Play, Pray, Eating';
+console.log(question4Str.match(/\b\w+ing\b/g));
+
+// 6. Remove all punctuations from a string.
+	let question5Str = 'Hello, world!';
+console.log(question5Str.replace(/[^\w\s]/g,""));
+
+
+// Find email addresses in a string.
+let question6Str = 'Email me at john.doe@example.com and jane_doe@example.net.';
+console.log(question6Str.match(/[a-z0-9]+(\.|\w+|_)@\w+\.\w+/gi));
+
+// Extract dates in the format DD/MM/YYYY.
+let question7Str = "Today's date is 11/09/2023.";
+    console.log(question7Str.match(/\d+\/\d+\/\d+/g));
+
+// Capture all words longer than 5 letters
+let question8Str = 'The elephant walked gracefully across the savannah.';
+    console.log(question8Str.match(/\b\w{6,}\b/gi));
+
+
+// Extract URLs from a text.
+let question9Str = 'Visit https://www.example.com and http://test.com';
+console.log(question9Str.match(/\bhttps?:\/\/\S+\b/g))
+
