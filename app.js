@@ -131,3 +131,4 @@ let question8Str = 'The elephant walked gracefully across the savannah.';
 let question9Str = 'Visit https://www.example.com and http://test.com';
 console.log(question9Str.match(/\bhttps?:\/\/\S+\b/g))
 
+// RegEx part 2
